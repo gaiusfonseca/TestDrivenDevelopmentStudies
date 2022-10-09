@@ -19,4 +19,21 @@ public class CarrinhoDeCompras {
 	public List<Item> getItens(){
 		return Collections.unmodifiableList(itens);
 	}
+	
+	public double maiorValor() {
+		double maiorValor = 0;
+		int tamanho = itens.size();
+		
+		if(tamanho == 0) {
+			return maiorValor;
+		}
+		
+		for(Item x : itens) {
+			if(maiorValor < x.getValorTotal()) {
+				maiorValor = x.getValorTotal();
+			}
+		}
+		
+		return maiorValor;
+	}
 }
