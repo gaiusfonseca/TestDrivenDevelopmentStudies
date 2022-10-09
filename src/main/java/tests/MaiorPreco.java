@@ -11,18 +11,13 @@ public class MaiorPreco {
 		double maiorValor = 0;
 		int tamanho = carrinho.getItens().size();
 		
-		switch(tamanho) {
-		case 0:
-			maiorValor = 0;
-			break;
-		case 1:
-			maiorValor = carrinho.getItens().get(0).getValorTotal();
-			break;
-		default:
-			for(Item x : carrinho.getItens()) {
-				if(maiorValor < x.getValorTotal()) {
-					maiorValor = x.getValorTotal();
-				}
+		if(tamanho == 0) {
+			return maiorValor;
+		}
+		
+		for(Item x : carrinho.getItens()) {
+			if(maiorValor < x.getValorTotal()) {
+				maiorValor = x.getValorTotal();
 			}
 		}
 		
