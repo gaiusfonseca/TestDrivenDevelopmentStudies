@@ -5,20 +5,19 @@ import java.util.Random;
 public class ItemBuilder {
 
 	private Item item;
+	private static Random generator;
 	private final static String[] DESCRIPTIONS = {"Geladeira", "Fogão", "Microondas", "TV", "Maquina de Lavar"};
-	private final static int QUANTITY = 1;
 	
 	public ItemBuilder() {
-		
+		generator = new Random();
 	}
 	
 	public Item generateRandonItem() {
 		return new Item();
 	}
 	
-	public double generateUnitValue(int index) {
+	private double generateUnitValue(int index) {
 		
-		Random generator = new Random();
 		double unitValue = 0;
 		
 		switch(index){
