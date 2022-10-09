@@ -25,7 +25,6 @@ public class ItemBuilder {
 	}
 	
 	private double generateUnitValue(int index) {
-		
 		double unitValue = 0;
 		
 		switch(index){
