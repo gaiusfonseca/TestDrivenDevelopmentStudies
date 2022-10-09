@@ -16,6 +16,10 @@ public class ItemBuilder {
 		return new Item();
 	}
 	
+	private String generateDescription() {
+		return DESCRIPTIONS[generator.nextInt(DESCRIPTIONS.length)];
+	}
+	
 	private double generateUnitValue(int index) {
 		
 		double unitValue = 0;
