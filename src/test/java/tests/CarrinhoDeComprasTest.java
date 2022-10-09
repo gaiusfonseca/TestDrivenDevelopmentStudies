@@ -30,10 +30,7 @@ class CarrinhoDeComprasTest {
 	@Test
 	void should_ReturnItemValue_When_CartHasAnItem() {
 		//given
-		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
-		Item item = new Item("Geladeira", 1, 900);
-		carrinho.adiciona(item);
-		
+		carrinho.adiciona(new Item("Geladeira", 1, 900));
 		double valorEsperado = 900;
 		
 		//when
