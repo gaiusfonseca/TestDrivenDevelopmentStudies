@@ -27,7 +27,7 @@ class ItemBuilderTest {
 		
 		//when
 		do {
-			actualItem = ib.generateRandonItem();
+			actualItem = ib.generateRandomItem();
 		}while(actualItem.getDescricao() != "Geladeira");
 		
 		String actualDescription = actualItem.getDescricao();

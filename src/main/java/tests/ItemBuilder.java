@@ -12,7 +12,7 @@ public class ItemBuilder {
 		generator = new Random();
 	}
 	
-	public Item generateRandonItem() {
+	public Item generateRandomItem() {
 		return new Item();
 	}
 	
