@@ -23,29 +23,20 @@ class ItemBuilderTest {
 		double minValue = 2000;
 		double maxValue = 3000;
 		
-		Item actualItem;
+		Item tempItem;
 		
 		//when
 		do {
-			actualItem = ib.generateRandomItem();
-		}while(actualItem.getDescricao() != "Geladeira");
+			tempItem = ib.generateRandomItem();
+		}while(tempItem.getDescricao() != "Geladeira");
 		
-		String actualDescription = actualItem.getDescricao();
-		int actualQuantity = actualItem.getQuantidade();
-		
-		final boolean isValueInRange;
-		
-		if(actualItem.getValorUnitario() >= minValue && actualItem.getValorUnitario() <= maxValue) {
-			isValueInRange = true;
-		}else {
-			isValueInRange = false;
-		}
+		Item actualItem = tempItem;
 		
 		//then
 		assertAll(
-				() -> assertTrue(actualDescription == expectedDescription),
-				() -> assertTrue(actualQuantity == expectedQuantity),
-				() -> assertTrue(isValueInRange)
+				() -> assertTrue(actualItem.getDescricao() == expectedDescription),
+				() -> assertTrue(actualItem.getQuantidade() == expectedQuantity),
+				() -> assertTrue(minValue <= actualItem.getValorUnitario() && actualItem.getValorUnitario() <= maxValue)
 				);
 	}
 
