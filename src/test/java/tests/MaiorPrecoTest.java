@@ -10,10 +10,9 @@ class MaiorPrecoTest {
 	void should_ReturnNull_When_CartIsEmpty() {
 		//given
 		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
-		MaiorPreco algoritmo = new MaiorPreco();
 		
 		//when
-		double valorEncontrado = algoritmo.encontra(carrinho);
+		double valorEncontrado = carrinho.maiorValor();
 		double valorEsperado = 0;
 		
 		//then
