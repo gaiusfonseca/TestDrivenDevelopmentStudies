@@ -20,6 +20,10 @@ public class ItemBuilder {
 		return DESCRIPTIONS[generator.nextInt(DESCRIPTIONS.length)];
 	}
 	
+	private int generateQuantity() {
+		return generator.nextInt(11) + 1;
+	}
+	
 	private double generateUnitValue(int index) {
 		
 		double unitValue = 0;
