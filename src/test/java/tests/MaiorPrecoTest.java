@@ -27,11 +27,10 @@ class MaiorPrecoTest {
 		Item item = new Item("Geladeira", 1, 900);
 		carrinho.adiciona(item);
 		
-		MaiorPreco algoritmo = new MaiorPreco();
 		double valorEsperado = 900;
 		
 		//when
-		double valorEncontrado = algoritmo.encontra(carrinho);
+		double valorEncontrado = carrinho.maiorValor();
 		
 		//then
 		assertEquals(valorEsperado, valorEncontrado);
