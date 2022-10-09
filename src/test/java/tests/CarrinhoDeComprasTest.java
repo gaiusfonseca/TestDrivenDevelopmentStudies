@@ -17,11 +17,10 @@ class CarrinhoDeComprasTest {
 	@Test
 	void should_ReturnNull_When_CartIsEmpty() {
 		//given
-		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+		double valorEsperado = 0;
 		
 		//when
 		double valorEncontrado = carrinho.maiorValor();
-		double valorEsperado = 0;
 		
 		//then
 		assertEquals(valorEsperado, valorEncontrado);
