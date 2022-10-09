@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class MaiorPrecoTest {
+class CarrinhoDeComprasTest {
 
 	@Test
 	void should_ReturnNull_When_CartIsEmpty() {
