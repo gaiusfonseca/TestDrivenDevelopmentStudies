@@ -21,7 +21,7 @@ public class ItemBuilder {
 	}
 	
 	private int generateQuantity() {
-		return generator.nextInt(11) + 1;
+		return generator.nextInt(11) + 1;	
 	}
 	
 	private double generateUnitValue(int index) {
@@ -51,5 +51,11 @@ public class ItemBuilder {
 		}
 		
 		return unitValue;
+	}
+	
+	private double generateValueInRange(int inferiorLimit, int superiorLimit, int multiplier) {
+		int limitExclusive = (superiorLimit - inferiorLimit) / multiplier + 1;
+		int baseValue = inferiorLimit / multiplier;
+		return (generator.nextInt(limitExclusive) + baseValue) * multiplier;
 	}
 }
