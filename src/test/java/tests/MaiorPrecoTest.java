@@ -47,8 +47,7 @@ class MaiorPrecoTest {
 		double valorEsperado = 1500;
 		
 		//when
-		MaiorPreco algoritmo = new MaiorPreco();
-		double valorEncontrado = algoritmo.encontra(carrinho);
+		double valorEncontrado = carrinho.maiorValor();
 		
 		//then
 		assertEquals(valorEncontrado, valorEsperado);
