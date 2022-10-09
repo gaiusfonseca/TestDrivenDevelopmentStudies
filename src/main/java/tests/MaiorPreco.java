@@ -16,12 +16,12 @@ public class MaiorPreco {
 			maiorValor = 0;
 			break;
 		case 1:
-			maiorValor = carrinho.getItens().get(0).getValorUnitario();
+			maiorValor = carrinho.getItens().get(0).getValorTotal();
 			break;
 		default:
 			for(Item x : carrinho.getItens()) {
-				if(maiorValor < x.getValorUnitario()) {
-					maiorValor = x.getValorUnitario();
+				if(maiorValor < x.getValorTotal()) {
+					maiorValor = x.getValorTotal();
 				}
 			}
 		}
