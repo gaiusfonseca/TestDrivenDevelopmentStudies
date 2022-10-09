@@ -2,10 +2,18 @@ package tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CarrinhoDeComprasTest {
 
+	private CarrinhoDeCompras carrinho;
+	
+	@BeforeEach
+	void setup() {
+		carrinho = new CarrinhoDeCompras();
+	}
+	
 	@Test
 	void should_ReturnNull_When_CartIsEmpty() {
 		//given
