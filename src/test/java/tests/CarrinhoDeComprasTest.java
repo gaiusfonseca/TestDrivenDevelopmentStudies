@@ -44,7 +44,6 @@ class CarrinhoDeComprasTest {
 	@Test
 	void should_ReturnMaxValueItem_When_CartHasItens() {
 		//given
-		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 		carrinho.adiciona(new Item("Geladeira", 1, 900));
 		carrinho.adiciona(new Item("Fogao", 1, 1500));
 		carrinho.adiciona(new Item("Maquina de Lavar", 1, 750));
