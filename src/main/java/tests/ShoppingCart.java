@@ -29,8 +29,8 @@ public class ShoppingCart {
 		}
 		
 		for(Item x : itens) {
-			if(higherValue < x.getValorTotal()) {
-				higherValue = x.getValorTotal();
+			if(higherValue < x.getTotalValue()) {
+				higherValue = x.getTotalValue();
 			}
 		}
 		

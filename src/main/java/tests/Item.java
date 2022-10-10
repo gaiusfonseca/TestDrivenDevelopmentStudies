@@ -16,31 +16,31 @@ public class Item {
 		this.unitValue = unitValue;
 	}
 	
-	public String getDescricao() {
+	public String getDescription() {
 		return description;
 	}
 
-	public void setDescricao(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
-	public int getQuantidade() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantidade(int quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
-	public double getValorUnitario() {
+	public double getUnitValue() {
 		return unitValue;
 	}
 
-	public void setValorUnitario(double unitValue) {
+	public void setUnitValue(double unitValue) {
 		this.unitValue = unitValue;
 	}
 	
-	public double getValorTotal() {
+	public double getTotalValue() {
 		return this.quantity * this.unitValue;	
 	}
 }

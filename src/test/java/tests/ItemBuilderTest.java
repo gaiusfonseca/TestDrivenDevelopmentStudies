@@ -29,15 +29,15 @@ class ItemBuilderTest {
 		//when
 		do {
 			tempItem = ib.setRandomItem().build();
-		}while(tempItem.getDescricao() != "Geladeira");
+		}while(tempItem.getDescription() != "Geladeira");
 		
 		Item actualItem = tempItem;
 		
 		//then
 		assertAll(
-				() -> assertTrue(actualItem.getDescricao() == expectedDescription),
-				() -> assertTrue(minQuantity <= actualItem.getQuantidade() && actualItem.getQuantidade() <= maxQuantity),
-				() -> assertTrue(minValue <= actualItem.getValorUnitario() && actualItem.getValorUnitario() <= maxValue)
+				() -> assertTrue(actualItem.getDescription() == expectedDescription),
+				() -> assertTrue(minQuantity <= actualItem.getQuantity() && actualItem.getQuantity() <= maxQuantity),
+				() -> assertTrue(minValue <= actualItem.getUnitValue() && actualItem.getUnitValue() <= maxValue)
 				);
 	}
 
