@@ -4,15 +4,15 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class CarrinhoDeCompras {
+public class ShoppingCart {
 
 	private List<Item> itens;
 	
-	public CarrinhoDeCompras() {
+	public ShoppingCart() {
 		this.itens = new ArrayList();
 	}
 	
-	public void adiciona(Item novoItem) {
+	public void addItem(Item novoItem) {
 		this.itens.add(novoItem);
 	}
 	
@@ -20,20 +20,20 @@ public class CarrinhoDeCompras {
 		return Collections.unmodifiableList(itens);
 	}
 	
-	public double maiorValor() {
-		double maiorValor = 0;
+	public double higherValue() {
+		double higherValue = 0;
 		int tamanho = itens.size();
 		
 		if(tamanho == 0) {
-			return maiorValor;
+			return higherValue;
 		}
 		
 		for(Item x : itens) {
-			if(maiorValor < x.getValorTotal()) {
-				maiorValor = x.getValorTotal();
+			if(higherValue < x.getValorTotal()) {
+				higherValue = x.getValorTotal();
 			}
 		}
 		
-		return maiorValor;
+		return higherValue;
 	}
 }

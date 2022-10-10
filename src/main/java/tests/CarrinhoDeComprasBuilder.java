@@ -2,10 +2,10 @@ package tests;
 
 public class CarrinhoDeComprasBuilder {
 
-	private CarrinhoDeCompras carrinho;
+	private ShoppingCart carrinho;
 	
 	public CarrinhoDeComprasBuilder() {
-		carrinho = new CarrinhoDeCompras();
+		carrinho = new ShoppingCart();
 	}
 	
 	public CarrinhoDeComprasBuilder comItens(double... valores) {
@@ -16,7 +16,7 @@ public class CarrinhoDeComprasBuilder {
 		return this;
 	}
 	
-	public CarrinhoDeCompras cria() {
+	public ShoppingCart cria() {
 		return carrinho;
 	}
 }

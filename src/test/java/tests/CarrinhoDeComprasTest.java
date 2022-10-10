@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 
 class CarrinhoDeComprasTest {
 
-	private CarrinhoDeCompras carrinho;
+	private ShoppingCart carrinho;
 	
 	@BeforeEach
 	void setup() {
-		carrinho = new CarrinhoDeCompras();
+		carrinho = new ShoppingCart();
 	}
 	
 	@Test
@@ -20,7 +20,7 @@ class CarrinhoDeComprasTest {
 		double valorEsperado = 0;
 		
 		//when
-		double valorEncontrado = carrinho.maiorValor();
+		double valorEncontrado = carrinho.higherValue();
 		
 		//then
 		assertEquals(valorEsperado, valorEncontrado);
@@ -34,7 +34,7 @@ class CarrinhoDeComprasTest {
 		double valorEsperado = 900;
 		
 		//when
-		double valorEncontrado = carrinho.maiorValor();
+		double valorEncontrado = carrinho.higherValue();
 		
 		//then
 		assertEquals(valorEsperado, valorEncontrado);
@@ -50,7 +50,7 @@ class CarrinhoDeComprasTest {
 		double valorEsperado = 1500;
 		
 		//when
-		double valorEncontrado = carrinho.maiorValor();
+		double valorEncontrado = carrinho.higherValue();
 		
 		//then
 		assertEquals(valorEncontrado, valorEsperado);
