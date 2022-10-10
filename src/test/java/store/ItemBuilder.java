@@ -1,4 +1,4 @@
-package tests;
+package store;
 
 import java.util.Random;
 
@@ -39,7 +39,7 @@ public class ItemBuilder {
 	}
 	
 	private int rndQuantity() {
-		return generator.nextInt(11) + 1;	
+		return generator.nextInt(10) + 1;	
 	}
 	
 	private double rndUnitValue(int index) {

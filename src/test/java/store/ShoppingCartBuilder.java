@@ -1,4 +1,4 @@
-package tests;
+package store;
 
 import store.Item;
 import store.ShoppingCart;
