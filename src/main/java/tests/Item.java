@@ -2,45 +2,45 @@ package tests;
 
 public class Item {
 
-	private String descricao;
-	private int quantidade;
-	private double valorUnitario;
+	private String description;
+	private int quantity;
+	private double unitValue;
 	
 	public Item() {
 		
 	}
 	
-	public Item(String descricao, int quantidade, double valorUnitario) {
-		this.descricao = descricao;
-		this.quantidade = quantidade;
-		this.valorUnitario = valorUnitario;
+	public Item(String description, int quantity, double unitValue) {
+		this.description = description;
+		this.quantity = quantity;
+		this.unitValue = unitValue;
 	}
 
 	public String getDescricao() {
-		return descricao;
+		return description;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setDescricao(String description) {
+		this.description = description;
 	}
 
 	public int getQuantidade() {
-		return quantidade;
+		return quantity;
 	}
 
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+	public void setQuantidade(int quantity) {
+		this.quantity = quantity;
 	}
 
 	public double getValorUnitario() {
-		return valorUnitario;
+		return unitValue;
 	}
 
-	public void setValorUnitario(double precoUnitario) {
-		this.valorUnitario = precoUnitario;
+	public void setValorUnitario(double unitValue) {
+		this.unitValue = unitValue;
 	}
 	
 	public double getValorTotal() {
-		return this.quantidade * this.valorUnitario;	
+		return this.quantity * this.unitValue;	
 	}
 }
