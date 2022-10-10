@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import store.Item;
+import store.ShoppingCart;
+
 class ShoppingCartTest {
 
 	private ShoppingCart shoppingCart;

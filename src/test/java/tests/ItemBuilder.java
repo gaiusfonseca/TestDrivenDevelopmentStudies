@@ -2,6 +2,8 @@ package tests;
 
 import java.util.Random;
 
+import store.Item;
+
 public class ItemBuilder {
 
 	private Item item;

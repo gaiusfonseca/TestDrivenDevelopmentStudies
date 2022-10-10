@@ -1,5 +1,8 @@
 package tests;
 
+import store.Item;
+import store.ShoppingCart;
+
 public class ShoppingCartBuilder {
 
 	private ShoppingCart shoppingCart;

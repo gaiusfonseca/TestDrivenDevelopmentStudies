@@ -1,4 +1,4 @@
-package tests;
+package store;
 
 public class Item {
 
