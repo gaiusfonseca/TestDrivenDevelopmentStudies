@@ -12,17 +12,20 @@ public class ItemBuilder {
 		generator = new Random();
 	}
 	
-	public void setDefaultItem() {
+	public ItemBuilder setDefaultItem() {
 		item = new Item("Geladeira", 1, 1500);
+		return this;
 	}
 	
-	public void setCustomItem(String description, int quantity, double unitPrice) {
+	public ItemBuilder setCustomItem(String description, int quantity, double unitPrice) {
 		item = new Item(description, quantity, unitPrice);
+		return this;
 	}
 	
-	public void setRandomItem() {
+	public ItemBuilder setRandomItem() {
 		int index = generator.nextInt(DESCRIPTIONS.length);
 		item = new Item(rndDescription(index), rndQuantity(), rndUnitValue(index));
+		return this;
 	}
 	
 	public Item build() {

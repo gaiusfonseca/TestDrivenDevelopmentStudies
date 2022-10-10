@@ -19,7 +19,8 @@ class ItemBuilderTest {
 	void should_ReturnCorrectValues_When_ItemGeladeira() {
 		//given
 		String expectedDescription = "Geladeira";
-		int expectedQuantity = 1;
+		int minQuantity = 1;
+		int maxQuantity = 10;
 		double minValue = 2000;
 		double maxValue = 3000;
 		
@@ -27,7 +28,7 @@ class ItemBuilderTest {
 		
 		//when
 		do {
-			tempItem = ib.build();
+			tempItem = ib.setRandomItem().build();
 		}while(tempItem.getDescricao() != "Geladeira");
 		
 		Item actualItem = tempItem;
@@ -35,7 +36,7 @@ class ItemBuilderTest {
 		//then
 		assertAll(
 				() -> assertTrue(actualItem.getDescricao() == expectedDescription),
-				() -> assertTrue(actualItem.getQuantidade() == expectedQuantity),
+				() -> assertTrue(minQuantity <= actualItem.getQuantidade() && actualItem.getQuantidade() <= maxQuantity),
 				() -> assertTrue(minValue <= actualItem.getValorUnitario() && actualItem.getValorUnitario() <= maxValue)
 				);
 	}
