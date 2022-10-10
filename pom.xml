@@ -11,7 +11,7 @@
   </properties>
   
   <groupId>br.gaius</groupId>
-  <artifactId>tests</artifactId>
+  <artifactId>TestDrivenStudies</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   

@@ -15,7 +15,7 @@ public class Item {
 		this.quantity = quantity;
 		this.unitValue = unitValue;
 	}
-
+	
 	public String getDescricao() {
 		return description;
 	}

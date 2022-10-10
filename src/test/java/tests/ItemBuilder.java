@@ -12,19 +12,32 @@ public class ItemBuilder {
 		generator = new Random();
 	}
 	
-	public Item generateRandomItem() {
-		return new Item();
+	public void setDefaultItem() {
+		item = new Item("Geladeira", 1, 1500);
 	}
 	
-	private String generateDescription() {
-		return DESCRIPTIONS[generator.nextInt(DESCRIPTIONS.length)];
+	public void setCustomItem(String description, int quantity, double unitPrice) {
+		item = new Item(description, quantity, unitPrice);
 	}
 	
-	private int generateQuantity() {
+	public void setRandomItem() {
+		int index = generator.nextInt(DESCRIPTIONS.length);
+		item = new Item(rndDescription(index), rndQuantity(), rndUnitValue(index));
+	}
+	
+	public Item build() {
+		return item;
+	}
+	
+	private String rndDescription(int index) {
+		return DESCRIPTIONS[index];
+	}
+	
+	private int rndQuantity() {
 		return generator.nextInt(11) + 1;	
 	}
 	
-	private double generateUnitValue(int index) {
+	private double rndUnitValue(int index) {
 		double unitValue = 0;
 		
 		switch(index){

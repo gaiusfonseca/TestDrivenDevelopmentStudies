@@ -27,7 +27,7 @@ class ItemBuilderTest {
 		
 		//when
 		do {
-			tempItem = ib.generateRandomItem();
+			tempItem = ib.build();
 		}while(tempItem.getDescricao() != "Geladeira");
 		
 		Item actualItem = tempItem;
